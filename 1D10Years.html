@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1D 10th Year Anniversary</title>
+</head>
+<style>
+body, html {
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+}
+
+.bgimg {
+	background: url(lonelyMic.jpg);
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	color: white;
+	font-family: 'Quicksand', sans-serif;
+	cursor: url(OneDLogosmol.png), auto;
+}
+
+.middle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	
+}
+
+.footer {
+	opacity: 1;
+	background-color: rgba(0,0,0,0.6);
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	color: white;
+	text-align: center;
+}
+
+h1:hover {
+	color: #ff0000;
+	text-shadow: 0 2px 2px #FF0000, 
+    	-2px 5px 0 #ff7f00, 
+    	-4px 10px 0 #ffff00,
+    	-8px 15px 0 #00ff00,
+    	-12px 20px 0 #0000ff,
+    	-16px 25px 0 #4b0082,
+    	-20px 30px 0 #9400d3;
+}
+
+hr {
+	margin: auto;
+	width: 40%;
+}
+
+a {
+	color: white;
+	font-family: 'Quicksand', sans-serif;
+	text-decoration: none;
+}
+
+</style>
+<body>
+
+<div class="bgimg">
+	<div class="middle">
+		<h1 style="font-size:6vw"> <a href="http://onedirectionmusic.com" target="_blank"> One Direction</a></h1>
+    	<hr>
+    	<p id="demo" style="font-size:3vw"></p>
+  	</div>
+  	<div class="footer">
+  		<h6 style="font-size:10px"> Made by: <a href="https://azlyw.github.io/BCard/bCard.html" target="_blank"> Alya (click me!)</a></h6>
+ 	</div>
+</div>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jul 23, 2020 20:23:00").getTime();
+
+// Update the count down every 1 second
+var countdownfunction = setInterval(function() {
+
+  // Get todays date and time
+	var now = new Date().getTime();
+  
+  // Find the distance between now an the count down date
+	var distance = countDownDate - now;
+  
+  // Time calculations for days, hours, minutes and seconds
+	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+  // Output the result in an element with id="demo"
+	document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+	+ minutes + "m " + seconds + "s ";
+  
+  // If the count down is over, write some text 
+	if (distance < 0) {
+		clearInterval(countdownfunction);
+		document.getElementById("demo").innerHTML = "OMG GUYS, IT'S 10 YEARS ALREADY (continue counting to 11, shall we)";
+  	}
+}, 1000);
+</script>
+
+</body>
+</html>
